@@ -39,7 +39,7 @@ def calculate_min_time(Ts: float, T0: float, d: float) -> float:
     return abs(ret)
 
 
-def determine_safe(Ts: float, T0: float) -> str:
+def determine_safe(Ts: float, T0: float) -> bool:
     """Determines if the turbidity is above threshold for safe use.
     
     Uses an inequality to check if the turbidity is above the threshold for safe use given the threshold and current turbidity.
