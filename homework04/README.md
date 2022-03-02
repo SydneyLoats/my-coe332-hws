@@ -25,7 +25,7 @@ test_ml_data_analysis.py is the python3 file that houses the unit tests for ml_d
 
 Meteorite_Landings.json is the json file that contains Meteorite Landing data.
 
-###How to Run the Code using Docker###
+### How to Run the Code using Docker ###
 
 Build the docker file using the following command
 
