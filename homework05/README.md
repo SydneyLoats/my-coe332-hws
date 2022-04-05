@@ -15,7 +15,7 @@ Launching a Redis Database Server
 Creating a Dockerfile
 ---------------------
 1. If the Dockerfile is not already created, create a Dockerfile with the following text:
-`
+
 	FROM python:3.9  
 
 	RUN mkdir /app  
@@ -24,10 +24,9 @@ Creating a Dockerfile
 	COPY requirements.txt /app/requirements.txt  
 	RUN pip install -r /app/requirements.txt  
 	COPY . /app  
-`
 
-ENTRYPOINT ["python"]
-CMD ["app.py"]
+	ENTRYPOINT ["python"]
+	CMD ["app.py"]
 
 Build the Flask Application
 ---------------------------
