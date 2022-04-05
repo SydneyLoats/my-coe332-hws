@@ -68,4 +68,4 @@ Instructions to Interact With All Routes Using curl
     },  
 
 
-
+Each meteorite landing has a unique name, like Gerald and Dominique, and includes information about its id, recclass, mass in grams, reclat, reclong, and GeoLocation coordinates.
