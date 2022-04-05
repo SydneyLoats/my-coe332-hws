@@ -1,5 +1,3 @@
-docker run -d -p 6379:6379 -v $(pwd)/data:/data:rw --name=joe-redis redis:6 --save 1 1
-
 Back to the Flask- Using Redis to 
 =================================
 The purpose of this homework is to use Docker to containerize a Flask application and a Redis database server to retrieve information about meteorite landings from the file 'ML_Data_Sample.json'. The file app.py loads in meteorite landing data from a json file and outputs the data in a way that is easy for the user to view.
@@ -13,6 +11,22 @@ Download Positional and Sighting Data
 Launching a Redis Database Server
 ---------------------------------
 1. Launch a Redis database server by typing `docker run -d -p 6379:6379 -v $(pwd)/data:/data:rw --name=<name> redis:6 --save 1 1` into the terminal.
+
+Creating a Dockerfile
+---------------------
+1. If the Dockerfile is not already created, create a Dockerfile with the following text:
+
+`	FROM python:3.9  
+
+	RUN mkdir /app  
+	RUN pip3 install --user redis  
+	WORKDIR /app  
+	COPY requirements.txt /app/requirements.txt  
+	RUN pip install -r /app/requirements.txt  
+	COPY . /app  `
+
+ENTRYPOINT ["python"]
+CMD ["app.py"]
 
 Build the Flask Application
 ---------------------------
