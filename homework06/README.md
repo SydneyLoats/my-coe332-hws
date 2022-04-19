@@ -22,7 +22,7 @@ Apply Each File in Kubernetes
 
 Exec into the Running Pod for Deployment
 ----------------------------------------
-1. Type `kubecl apply -o wide` into the command line to see all of the files you just applied.
+1. Type `kubecl get pods` into the command line to see all of the files you just applied.
 
 2. You will now be able to identify the pod name. It should look similar to the following:
 
@@ -34,11 +34,11 @@ Exec into the Running Pod for Deployment
 
 Running the Application using Curl
 ----------------------------------
-1. Now that we are in the running pod, we can use the usual curl methods to run the flask application. Log onto the TACC computer on a second terminal.
+1. Now that we are in the running pod, we can use the usual curl methods to run the flask application.
 
-2. Type `curl localhost:<flask port>/data -X POST` to load the meteorite landing data. You will recieve a message "Data loaded from file to dictionary." when the data is loaded.
+2. Type `curl <flask port>/data -X POST` to load the meteorite landing data. You will recieve a message "Data loaded from file to dictionary." when the data is loaded.
 
-3. Type `curl localhost:<flask port>/data` to return a json string of the meteorite landing data. The data should look like the following:
+3. Type `curl <flask port>/data` to return a json string of the meteorite landing data. The data should look like the following:
 
 {  
   "meteorite_landings": [  
