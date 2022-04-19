@@ -1,0 +1,16 @@
+---
+apiVersion: v1
+kind: PersistentVolumeClaim 
+metadata:
+  name: sloats-test
+  labels:
+    username: sloats
+    env: test
+spec:
+    accessModes:
+    - readWriteOnce
+    storageClassName: nfs
+    resources:
+        requests:
+            storage: 1Gi
+
