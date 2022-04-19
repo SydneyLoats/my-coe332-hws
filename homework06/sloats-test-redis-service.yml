@@ -6,6 +6,7 @@ metadata:
     labels:
       username: sloats
       env: test
+      app: sloats-test-redis
 spec:
   type: ClusterIP
   selector:

@@ -9,8 +9,6 @@ metadata:
     app: sloats-test-redis
 spec:
   replicas: 1
- # containers:
- #   image: redis:6
   selector:
     matchLabels:
         app: sloats-test-redis
@@ -22,11 +20,14 @@ spec:
   spec:
     containers:
     - image: redis:6
+      ports:
+      - name: http
+        containerPort: 6379
       volumeMounts:
       - mountPath: "/data"
         name: redis-test-volume
     volumes:
-    - name: redis-test-volume 
+    - name: sloats-test-redis-pvc 
       persistantVolumeClaim:
           claimName: sloats-test-redis-pvc
       

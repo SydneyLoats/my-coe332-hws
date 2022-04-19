@@ -6,6 +6,7 @@ metadata:
   labels:
     username: sloats
     env: test
+    app: sloats-test-flask
 spec:
   type: ClusterIP
   selector:
