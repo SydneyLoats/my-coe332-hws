@@ -1,0 +1,20 @@
+---
+apiVersion: v1
+kind: Deployment
+metadata:
+  name: sloats-test-redis-deployment
+  labels:
+    username: sloats
+    env: test
+spec:
+  replicas: 1
+  containers:
+    image: redis:6
+  selector:
+    matchLabels:
+        app: sloats-test-redis
+  containers:
+  - image: redis:6
+    volumeMounts:
+    - mountPath: /data
+      name:     

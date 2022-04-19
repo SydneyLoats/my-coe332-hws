@@ -1,0 +1,13 @@
+---
+apiVersion: v1
+kind: Deployment
+metadata:
+  name: sloats-test-flask-deployment
+  labels:
+    username: sloats
+    env: test
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: sloats-test
