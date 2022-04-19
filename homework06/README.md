@@ -1,6 +1,6 @@
-Back to the Flask- Using Redis for Meteorite Landing Data
-=========================================================
-The purpose of this homework is to use Kubernetes to deploy our flask API to retrieve information about meteorite landings from the file 'ML_Data_Sample.json'. This homework builds off of the Flask application we created in the previous homework. Once we ssh into Kubernetes and follow the necessary steps toapply each file into Kubernetes, we will be able to use the same curl methods as in the last homework to load in meteorite landing data from a json file and outputs the data in a way that is easy for the user to view.
+Deploying Our Flask API to Kubernetes
+=====================================
+The purpose of this homework is to use Kubernetes(k8s) to deploy our flask API to retrieve information about meteorite landings from the file 'ML_Data_Sample.json'. This homework builds off of the Flask application we created in the previous homework. Once we ssh into Kubernetes and follow the necessary steps toapply each file into Kubernetes, we will be able to use the same curl methods as in the last homework to load in meteorite landing data from a json file and outputs the data in a way that is easy for the user to view.
 
 Download Positional and Sighting Data
 -------------------------------------
