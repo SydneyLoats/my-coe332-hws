@@ -40,26 +40,26 @@ Running the Application using Curl
 
 3. Type `curl localhost:<flask port>/data` to return a json string of the meteorite landing data. The data should look like the following:
 
-{
-  "meteorite_landings": [
-    {
-      "name": "Gerald",
-      "id": "10001",
-      "recclass": "H4",
-      "mass (g)": "5754",
-      "reclat": "-75.6691",
-      "reclong": "60.6936",
-      "GeoLocation": "(-75.6691, 60.6936)"
-    },
-    {
-      "name": "Dominique",
-      "id": "10002",
-      "recclass": "L6",
-      "mass (g)": "1701",
-      "reclat": "-9.4378",
-      "reclong": "49.5751",
-      "GeoLocation": "(-9.4378, 49.5751)"
-    },
+{  
+  "meteorite_landings": [  
+    {  
+      "name": "Gerald",  
+      "id": "10001",  
+      "recclass": "H4",  
+      "mass (g)": "5754",  
+      "reclat": "-75.6691",  
+      "reclong": "60.6936",  
+      "GeoLocation": "(-75.6691, 60.6936)"  
+    },  
+    {  
+      "name": "Dominique",  
+      "id": "10002",  
+      "recclass": "L6",  
+      "mass (g)": "1701",  
+      "reclat": "-9.4378",  
+      "reclong": "49.5751",  
+      "GeoLocation": "(-9.4378, 49.5751)"  
+    },  
 
 
 Each meteorite landing has a unique name, like Gerald and Dominique, and includes information about its id, recclass, mass in grams, reclat, reclong, and GeoLocation coordinates.
