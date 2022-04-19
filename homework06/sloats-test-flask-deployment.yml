@@ -4,6 +4,7 @@ kind: Deployment
 metadata:
   name: sloats-test-flask-deployment
   labels:
+    app: sloats-test-flask
     username: sloats
     env: test
 spec:
@@ -11,3 +12,12 @@ spec:
   selector:
     matchLabels:
       app: sloats-test
+  template:
+    metadata:
+     labels:
+       username: sloats
+       env: test
+     spec:
+       containers:
+       - name: flask-deployment
+         image: sloats/homework06:flask-deployment

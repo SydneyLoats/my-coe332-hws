@@ -4,11 +4,12 @@ kind: PersistentVolumeClaim
 metadata:
   name: sloats-test-redis-pvc
   labels:
+    app: sloats-test-redis
     username: sloats
     env: test
 spec:
     accessModes:
-    - readWriteOnce
+    - ReadWriteOnce
     storageClassName: nfs
     resources:
         requests:

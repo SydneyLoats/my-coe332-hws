@@ -6,15 +6,27 @@ metadata:
   labels:
     username: sloats
     env: test
+    app: sloats-test-redis
 spec:
   replicas: 1
-  containers:
-    image: redis:6
+ # containers:
+ #   image: redis:6
   selector:
     matchLabels:
         app: sloats-test-redis
-  containers:
-  - image: redis:6
-    volumeMounts:
-    - mountPath: /data
-      name:     
+  template:
+    metadata:
+      labels:
+        username: sloats
+        env: test
+  spec:
+    containers:
+    - image: redis:6
+      volumeMounts:
+      - mountPath: "/data"
+        name: redis-test-volume
+    volumes:
+    - name: redis-test-volume 
+      persistantVolumeClaim:
+          claimName: sloats-test-redis-pvc
+      

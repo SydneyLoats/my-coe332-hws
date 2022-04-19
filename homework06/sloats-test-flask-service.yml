@@ -9,8 +9,8 @@ metadata:
 spec:
   type: ClusterIP
   selector:
-    app: sloats-test
+    app: sloats-test-flask
   ports:
-  - name: sloats-test
-    port: 6379
-    targetPort: 6379
+  - name: sloats-test-flask
+    port: 5000
+    targetPort: 5000

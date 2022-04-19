@@ -3,12 +3,15 @@ apiVersion: v1
 kind: Service
 metadata:
   name: sloats-test-redis-service
-  env: test
+    labels:
+      username: sloats
+      env: test
 spec:
   type: ClusterIP
   selector:
-    app: sloats-test
+    app: sloats-test-redis
   ports:
-  - name: sloats-test
+  - name: sloats-test-redis
     port: 6379
     targetPort: 6379
+
