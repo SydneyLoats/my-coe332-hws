@@ -4,7 +4,7 @@ The following image describes how the application I created on the midterm works
 
 Diagram
 -------
-![plot](./homework7.png)
+![plot](./homework7.jpg)
 
 Diagram Explanation
 -------------------
