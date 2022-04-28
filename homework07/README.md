@@ -6,21 +6,21 @@ Diagram
 -------
 ![plot](./homework7.png)
 
-How the Flask App Works
------------------------
-This diagram focuses on how the Flask application works and using the curl methods to return positional and sighting data.
+Diagram Explanation
+-------------------
+This diagram focuses on how the Flask application works and using the curl methods to return positional and sighting data. The top of the diagram shows the first necessary steps to use the application after the Flask application has been started. Follow steps 1 and 2.
 
-1. Type `curl localhost:5016/interact` to see a list of routes to interact with the application.
+1. To understand how the application works, type `curl localhost:5016/interact` to see a list of routes to interact with the application.
 
-2. Type `curl localhost:5016/load_data -X POST` to load the positional and sighting data. This must be done before you can interact with any of the other routes.
+2. Then use `curl localhost:5016/load_data -X POST` to load the positional and sighting data. This must be done before you can interact with any of the other routes.
 
 Now we can chose if we want to retrieve positional data or sighting data.
 
-To retrieve positional data, follow steps 1 and 2.
+The left part of the diagram after loading the data is to retrieve positional data. Follow steps 1 and 2.
 
 1. Type `curl localhost:5016/epoch` to return a string of all epochs. Each line that is returned is the name of an epoch.
 
-2. Type `curl localhost:5016/epoch/<epoch-name>` to return a dictionary of the information about a specific epoch. The dictionary has keys that represent the type of information, where the value is the value of that specific piece of information. For example, `curl localhost:5016/epoch/2022-057T12:00:00.000Z` returns:
+2. To get data about a specific epoch, type `curl localhost:5016/epoch/<epoch-name>` to return a dictionary of the information about a specific epoch. The dictionary has keys that represent the type of information, where the value is the value of that specific piece of information. For example, `curl localhost:5016/epoch/2022-057T12:00:00.000Z` returns:
 
 {  
   "X": {  
@@ -51,23 +51,25 @@ To retrieve positional data, follow steps 1 and 2.
 
 where the "#text" is the value and "@units" is the units. In this case, the X coordinate is at about 6626.5 km.
 
-To retrieve positional data, follow steps 1 and 2.
+The application ends here for positional data.
 
-1. Type `curl localhost:5016/countries` returns a dictionary of all countries and how many sightings occurred in that city.
+The right side of the diagram illustrates how to use the application to retrieve local sighting data. Follow steps 1 and 2.
 
-2. Type `curl localhost:5016/countries/<specific-country>` returns a dictionary of all sightings in that specific country.
+1. Type `curl localhost:5016/countries` to return a dictionary of all countries and how many sightings occurred in that city.
+
+2. Type `curl localhost:5016/countries/<specific-country>` to return a dictionary of all sightings in that specific country.
 
 To retreive more specific positional data about the region, follow steps 3 and 4, otherwise you can exit the application.
 
-3. Type `curl localhost:5016/countries/<specific-country>/regions` returns a dictionary containing all regions and how many sightings occurred in that city.
+3. Type `curl localhost:5016/countries/<specific-country>/regions` to return a dictionary containing all regions and how many sightings occurred in that city.
 
-4. Type `curl localhost:5016/countries/<specific-country>/regions/<specific-region>` returns a dictionary of all sightings in that specific country and region.
+4. Type `curl localhost:5016/countries/<specific-country>/regions/<specific-region>` to return a dictionary of all sightings in that specific country and region.
 
 To retrieve more specific positional data about the city, follow steps 5 and 6, otherwise you can exit the application.
 
-5. Type `curl localhost:5016/countries/<specific-country>/regions/<specific-region>/cities` returns a dictionary of all cities and how many sightings occurred in that city.
+5. Type `curl localhost:5016/countries/<specific-country>/regions/<specific-region>/cities` to return a dictionary of all cities and how many sightings occurred in that city.
 
-6. Type `curl localhost:5016/countries/<specific-country>/regions/<specific-region>/cities/<specific-city>` returns a dictionary of all sightings in that specific country, region, and city. For example, `curl localhost:5016/countries/United_States/regions/Wyoming/cities/Basin`
+6. Type `curl localhost:5016/countries/<specific-country>/regions/<specific-region>/cities/<specific-city>` to return a dictionary of all sightings in that specific country, region, and city. For example, `curl localhost:5016/countries/United_States/regions/Wyoming/cities/Basin`
 
 {  
   "United_States, Wyoming, Basin": [  
