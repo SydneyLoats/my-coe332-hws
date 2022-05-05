@@ -1,79 +1,44 @@
-#Sydney Loats SML4267 homework03
+Analyzing Turbidity Data
+========================
+This homework reads tubidity data from a json file and calculates turbidity, average turbidity, minimum time it takes for the turbidity to fall below a threshold, and determines if it is safe for use.
 
+Downloading the Data
+--------------------
+To download the turbidity data, type `wget https://raw.githubusercontent.com/wjallen/turbidity/main/turbidity_data.json` into the terminal.
 
+How it Works
+------------
+1. The main function loops through each of the unique days and times and and reads in the calibration constant and detector current.
 
-#This homework reads tubidity data from a json file and calculates turbidity, average turbidity, minimum time it takes for the turbidity to fall below a threshold, and determines if it is safe for use
+2. The function calculate_turbidity takes in parameters for the calibration constant and detector current and returns a float.
 
+3. The function calculate_min_time takes in parameters for the turbidity threshold, current turbidity, and the decay factor and returns the minimum time it takes for the turbidity to fall below the treshold.
 
+4. The function determine safe returns a bool that determines if the turbidity is safe or not.
 
-#To download the json file and use it to run the program,
+5. The function calculate_avg_turbidity calculates current turbidity by averaging the previous 5 turbidities.
 
-##STEP 1: 
+6. The program returns information about average turbidity, if the turbidity is above or below the threshold, and the minimum time.
 
-##Go to this link
+Files
+-----
+1. `analyze_water.py` contains the functions that analyzes the data.
 
-##   https://raw.githubusercontent.com/wjallen/turbidity/main/turbidity_data.json
+2. `test_analyze_water.py` contains unit tests for `analyze_water.py`.
 
-##Press ctrl-s and save the json file to somewhere in your computer.
+Running the Code
+----------------
+1. Run the program by typing `python3 analyze_water.py` into the command line.
 
-##For example, I saved mine to \Users\sydney\Documents\UT\2022Spring\COE332
+2. To run the unit tests, type `pytest test_analyze_water.py` into the command line.
 
-##The file should be named turbidity_data.json
+Results
+-------
+The results will look like the following:  
 
-###STEP 2:
+Average turbidity based on most recent five measurements = 0.84 NTU  
+INFO:root:Turbidity is above threshold for safe use  
+Minimum time required to return below a safe threshold = 8.63 hours  
 
-###Open the command prompt on your computer and navigate to the directory where turbidity_data.json is located.
-
-###It should look similar to the following:
-
-###C:\Users\sydney\Documents\UT\2022Spring\COE311k> 
-
-###The use secure copy, scp, to copy the file to your isp02 computer. It should look similar to the following (use your own username, I'm using sloats"
-
-###C:\Users\sydney\Documents\UT\2022Spring\COE311k>scp tubidity_data.json sloats@isp.tacc.utexas.edu:
-
-###The json file will be copied to your isp computer and you should move the file into the folder where the other .py files required to run the program are located
-
-
-
-
-#This homework reads tubidity data from a json file and calculates turbidity, average turbidity, minimum time it takes for the turbidity to fall below a threshold, and determines if it is safe for use
-
-##The main function loops through each of the unique days and times and and reads in the calibration constant and detector current.
-
-##The function calculate_turbidity takes in parameters for the calibration constant and detector current and returns a float.
-
-##The function calculate_min_time takes in parameters for the turbidity threshold, current turbidity, and the decay factor and returns the minimum time it takes for the turbidity to fall below the treshold
-
-##The function determine safe returns a bool that determines if the turbidity is safe or not.
-
-##The function calculate_avg_turbidity calculates current turbidity by averaging the previous 5 turbidities.
-
-##The program returns information about average turbidity, if the turbidity is above or below the threshold, and the minimum time.
-
-
-
-
-##The test_analyze_water.py file contains unit tests for analyze_water.py
-
-
-
-#To run the complete program, first download the turbidity data using the steps to download the json file. Then run the program by typing 
-
-#python3 analyze_water.py
-
-#into the command line.
-
-##The first line will display average turbidity.
-
-##The second line will be a logging of if the turbidity is safe
-
-##The third line will display the minimum time.
-
-##Then run the unit tests by typing
-
-##pytest test_analyze_water.py
-
-##into the command line.
-
+Where the first line is average turbidity, the second line is logging if the turbidity is safe, and the third line is the minimum time.
 
