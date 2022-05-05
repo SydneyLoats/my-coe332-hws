@@ -1,10 +1,10 @@
 Investigating Meteorite Sites
 =============================
-This homework creates a json file with data and uses that data to calulate distances and times that it takes for a robot vehicle to collect soil samples on mars. 
+This homework generates random data and stores it in a json file. This data is then used to calulate distances and times that it takes for a robot vehicle to collect soil samples on mars. 
 
 Files
 -----
-1. `generate_sites.py` creates a json file called sites.json that holds information about 5 meteorite landing sites: site id number, latitude, longitude, and composition of the soil at the site (either stony, iron, or stony-iron).
+1. `generate_sites.py` generates random data and stores it in a json file called sites.json. The data contains information about 5 meteorite landing sites: site id number, latitude, longitude, and composition of the soil at the site (either stony, iron, or stony-iron).
 
 2. `calculate_trip.py` uses the information from sites.json to calculate the time it takes to travel between the 5 sites and time to sample the soil This file outputs time to travel and time to sample at each of the five legs of the trip.
 
