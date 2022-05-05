@@ -13,3 +13,12 @@ Run the Code
 1. Generate the `sites.json` file by typing `python3 generate_sites.py` into the command line.
 
 2. Calculate the distances and times to complete the trop by typing `python3 calculate_trip.py` into the command line. This will produce output data for each leg and the trip as a whole.
+
+The results should look like the following:  
+
+leg = 1, time to travel = 7.014921957179463 hr, time to sample = 2 hr  
+leg = 2, time to travel = 0.7974115838215022 hr, time to sample = 1 hr  
+leg = 3, time to travel = 2.7439711968473786 hr, time to sample = 3 hr  
+leg = 4, time to travel = 8.975554314167255 hr, time to sample = 3 hr  
+leg = 5, time to travel = 3.7158594960135503 hr, time to sample = 1 hr  
+number of legs = 5, total time elapsed = 23.247718548029148 hr  
