@@ -4,9 +4,7 @@ This homework creates a json file with data and uses that data to calulate dista
 
 Files
 -----
-This folder contains two additional files,
-
-1.`generate_sites.py` creates a json file called sites.json that holds information about 5 meteorite landing sites: site id number, latitude, longitude, and composition of the soil at the site (either stony, iron, or stony-iron).
+1. `generate_sites.py` creates a json file called sites.json that holds information about 5 meteorite landing sites: site id number, latitude, longitude, and composition of the soil at the site (either stony, iron, or stony-iron).
 
 2. `calculate_trip.py` uses the information from sites.json to calculate the time it takes to travel between the 5 sites and time to sample the soil This file outputs time to travel and time to sample at each of the five legs of the trip.
 
