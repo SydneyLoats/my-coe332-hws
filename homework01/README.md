@@ -26,7 +26,7 @@ even
 The results should look like the following:  
 
 3  
-5 
+5  
 7  
 11  
 13  
